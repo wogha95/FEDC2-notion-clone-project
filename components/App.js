@@ -124,7 +124,7 @@ export default function({ $target }) {
 
     const popHistoryState = () => {
       const path = location.pathname;
-      const [, , liId = null] = path.split('/');
+      const [, , , liId = null] = path.split('/');
       if(liId) clickDocument(liId, path, true);
     }
     
