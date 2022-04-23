@@ -101,7 +101,8 @@ export default function({ $target,
           addDocument(liId);
         }
         else if (operatorName === 'del') {
-          deleteDocument(liId);
+          const yes = confirm('삭제를 원하시나요? @_@');
+          if(yes) deleteDocument(liId);
         }
       } else if (clickedTarget.matches('input')) {
         const $inputElement = clickedTarget.parentElement.nextElementSibling.nextElementSibling;
